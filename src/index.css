@@ -1,3 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --color-primary: #f8f9fa;
+  --color-secondary: #e9ecef;
+  --color-tertiary: #dee2e6;
+  --color-quaternary: #ced4da;
+  --color-quinary: #adb5bd;
+  --color-senary: #6c757d;
+  --color-septenary: #495057;
+  --color-octonary: #343a40;
+  --color-nonary: #212529;
+  --color-denary: #000000;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+  background-color: var(--color-denary);
+}
+
+.parallax-container {
+  position: relative;
+  height: 90vh;
+  overflow: hidden;
+}
+
+.parallax {
+  background-image: url("./assets/About/Interior.jpg");
+  height: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+}
+
+.service-card {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.2s;
+  transform-style: preserve-3d;
+}
+
+.gradient-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  transition: background 0.2s;
+}
