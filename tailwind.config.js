@@ -5,6 +5,7 @@ module.exports = {
     extend: {
       fontFamily: {
         custom1: ["Merienda", "Sans"],
+        custom2: ["Julius Sans One", "sans-serif"],
       },
       colors: {
         primary: "var(--color-primary)",
@@ -17,6 +18,7 @@ module.exports = {
         octonary: "var(--color-octonary)",
         nonary: "var(--color-nonary)",
         denary: "var(--color-denary)",
+        tabs: "var(--color-tabs)",
       },
     },
   },

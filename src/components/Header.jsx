@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Logo from "../assets/Logo/logo.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircle } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [padding, setPadding] = useState("py-3");
@@ -36,16 +37,16 @@ const Header = () => {
     },
     {
       name: "Projects",
-      path: "/projects",
+      path: "/about",
     },
     {
       name: "Contact Us",
-      path: "/contact",
+      path: "/about",
     },
   ];
 
   return (
-    <div className="w-[100vw] bg-denary flex items-center justify-center fixed top-0 z-50 border-b border-senary">
+    <div className="w-[100vw] flex items-center bg-denary justify-center fixed top-0 z-50 border-b border-senary ">
       <div
         className={`w-[75%] p-1 ${padding} flex justify-between transition-all duration-300`}
       >
@@ -53,18 +54,19 @@ const Header = () => {
         <div className="flex w-[30%]">
           <img src={Logo} alt="Vastitude" className="h-[56px]" />
           <div className="flex flex-col justify-end items-end">
-            <p className="text-primary font-custom1 font-bold text-2xl">
-              AsTiTudE
+            <p className="text-primary font-custom2 font-bold text-2xl">
+              ASTITUDE
             </p>
-            <p className="text-primary font-medium text-sm font-custom1">
-              <span className="text-lg">A</span>RCHiTECTS
+            <p className="text-primary font-medium text-sm font-custom2">
+              <span className="text-lg">A</span>RCHITECTS
             </p>
           </div>
         </div>
 
         {/* Tabs */}
         {tabs.map((item, index) => (
-          <div
+          <Link
+            to={item.path}
             key={index}
             className="cursor-pointer gap-x-2 text-primary hover:text-quinary ease-in-out duration-150 items-center flex justify-between"
           >
@@ -75,7 +77,7 @@ const Header = () => {
                 className="h-[7px] -translate-y-[0.5px]"
               />
             </p>
-          </div>
+          </Link>
         ))}
       </div>
     </div>

@@ -1,38 +1,36 @@
 import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "./Home";
-import Header from "./Header";
-import Footer from "./Footer";
+
+import AboutPage from "./AboutPage";
+import HomePage from "./HomePage";
+import OurServices from "./OurServices";
 
 const Body = () => {
   const appRouter = createBrowserRouter([
     {
       path: "/",
       element: <Home />,
-    },
-    {
-      path: "/about",
-      element: <Home />,
-    },
-    {
-      path: "/services",
-      element: <Home />,
-    },
-    {
-      path: "/projects",
-      element: <Home />,
-    },
-    {
-      path: "/contact",
-      element: <Home />,
+      children: [
+        {
+          index: true, // Default route
+          element: <HomePage />,
+        },
+        {
+          path: "/about",
+          element: <AboutPage />,
+        },
+        {
+          path: "/services",
+          element: <OurServices />,
+        },
+      ],
     },
   ]);
 
   return (
-    <div className="">
-      <Header />
+    <div>
       <RouterProvider router={appRouter} />
-      <Footer />
     </div>
   );
 };
