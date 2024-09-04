@@ -1,12 +1,11 @@
 import React, { useEffect } from "react";
-import About from "../assets/About/AboutBackground.jpg";
 import about from "../assets/About/About.jpg";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
-import { faCircle } from "@fortawesome/free-solid-svg-icons";
+import { faAngleRight, faCircle } from "@fortawesome/free-solid-svg-icons";
 import team from "../assets/About/Team.png";
 import Button from "@mui/material/Button";
+import transitionVideo from "../assets/Video/Loading.mp4";
 
 const AboutPage = () => {
   useEffect(() => {
@@ -16,17 +15,12 @@ const AboutPage = () => {
   return (
     <div
       className="w-full min-h-[100vh]"
-      style={{
-        backgroundImage: `url(${About})`,
-      }}
+      style={{ backgroundColor: "#cccaca" }}
     >
-      <div className="w-full flex items-center justify-center mt-[85px]">
-        <div className="text-primary w-[75%] flex justify-between items-end min-h-[118px]">
+      <div className="w-full flex items-center justify-center mt-[64px]">
+        <div className="text-denary lg:w-[75%] xs:w-[95%] flex justify-between items-end min-h-[118px]">
           <p className="text-4xl tracking-widest font-bold uppercase">About</p>
-
-          {/* link */}
-          <p className="tracking-[0.4em] text-xs text-primary font-light uppercase">
-            {" "}
+          <p className="tracking-[0.4em] text-xs text-denary font-light uppercase">
             <span>
               <Link to="/">Home</Link>
             </span>{" "}
@@ -35,20 +29,19 @@ const AboutPage = () => {
         </div>
       </div>
 
-      {/* Mian section */}
-      <div className="bg-denary w-full flex justify-between mt-24">
-        <div className="h-[700px] w-[70%] -ml-96">
+      <div className="bg-denary w-full flex lg:flex-row xs:flex-col justify-between mt-24 ">
+        <div className="lg:h-[700px] xs:w-full lg:w-[70%] lg:-ml-96 mt-20">
           <img src={about} alt="" className="w-full h-full rounded-br-md" />
         </div>
 
-        <div className="w-[43%] flex flex-col items-start justify-center">
+        <div className="lg:w-[43%] xs:w-full flex xs:pl-8 xs:mt-10 flex-col items-start justify-center">
           <h1 className="text-primary font-bold text-5xl tracking-wide">
             About Us
           </h1>
           <h2 className="text-secondary uppercase text-xl py-2 pt-5 tracking-widest">
             Vastitude Architects
           </h2>
-          <div className="w-[70%] text-justify mt-8 pb-7 text-quaternary">
+          <div className="lg:w-[70%] xs:w-[90%] text-justify mt-8 pb-7 text-quaternary">
             <p className="py-2">
               Vastitude Architects is a full-service architectural firm that
               specializes in residential, commercial, and industrial projects.
@@ -73,7 +66,6 @@ const AboutPage = () => {
         </div>
       </div>
 
-      {/* The Firm */}
       <div className="bg-denary flex flex-col items-center justify-between w-full ">
         <h1 className="text-primary mt-20 text-center text-5xl font-bold tracking-wide">
           Our Team Members
@@ -87,44 +79,37 @@ const AboutPage = () => {
           <div className="border border-octonary w-[45%]"></div>
         </div>
 
-        <div className="w-full flex items-center mt-20 flex-row-reverse justify-between ">
-          <div className="h-[500px] w-[40%] ">
+        <div className="w-full flex items-center mt-20 lg:flex-row-reverse xs:flex-col-reverse justify-between ">
+          <div className="lg:h-[500px] lg:w-[40%] xs:w-full xs:h-[300px]">
             <img src={team} alt="" className="w-full h-full rounded-l-md" />
           </div>
 
-          <div className="w-[60%] flex flex-col items-center justify-center">
-            <div className="w-[70%] flex flex-col items-start justify-between">
+          <div className="lg:w-[60%] xs:w-full flex flex-col items-center justify-center">
+            <div className="lg:w-[70%] xs:w-[95%] flex flex-col items-center justify-between">
               <h1 className="text-primary font-bold text-5xl tracking-wide">
                 The Firm
               </h1>
               <h2 className="text-secondary uppercase text-xl py-2 pt-5 tracking-widest">
                 Vastitude Architects
               </h2>
-              <div className="w-[70%] text-justify mt-4 pb-7 text-quaternary">
+              <div className="w-[70%] text-justify flex items-center flex-col justify-between mt-4 pb-7 text-quaternary ">
                 <p className="tracking-wider text-sm ">Founders</p>
-                <h1 className=" text-lg font-bold tracking-wide">
-                  Harish Dhiman
-                </h1>
-                <h1 className="text-lg font-bold tracking-wide">
-                  Manish Bhardwaj
-                </h1>
+                <div className="w-full flex gap-x-20 justify-evenly items-center ">
+                  <div className=" text-2xl font-bold tracking-wide">
+                    Harish
+                    <div>Dhiman</div>
+                  </div>
 
-                <p className=" mt-3 pt-2 tracking-wider text-sm">
-                  Senior Architect
-                </p>
-                <h1 className=" text-lg font-bold tracking-wide">
-                  Obaid Khurshid
-                </h1>
+                  <div className="text-2xl font-bold tracking-wide">
+                    Manish
+                    <div>Bhardwaj</div>
+                  </div>
+                </div>
 
-                <p className=" mt-3 pt-2 tracking-wider text-sm">
-                  Project Manager
-                </p>
-                <h1 className=" text-lg font-bold tracking-wide">
-                  Krishna Kant Sharma
-                </h1>
+                <h1 className="text-xl font-bold tracking-wide mt-7">&</h1>
 
                 <p className=" mt-3 pt-2 tracking-wider text-sm">Team</p>
-                <h1 className=" text-lg font-bold tracking-wide">
+                <h1 className=" text-xl font-bold tracking-wide">
                   30+ Team Members
                 </h1>
               </div>
@@ -133,10 +118,8 @@ const AboutPage = () => {
         </div>
       </div>
 
-      {/* Our Mission */}
-      <div className="flex items-center justify-evenly bg-denary pb-5">
-        {/* Services */}
-        <div className="w-[20%] flex flex-col items-center mt-28 justify-between">
+      <div className="flex items-center lg:justify-evenly xs:justify-between lg:flex-row xs:flex-col bg-denary pb-5">
+        <div className="lg:w-[20%] xs:w-full flex flex-col items-center mt-28 justify-between">
           <h1 className="text-primary text-4xl tracking-widest text-left p-2 font-semibold">
             Services
           </h1>
@@ -151,8 +134,7 @@ const AboutPage = () => {
           </ul>
         </div>
 
-        {/* Industries */}
-        <div className="w-[20%] flex flex-col items-center mt-28 justify-between">
+        <div className="lg:w-[20%] xs:w-full flex flex-col items-center mt-28 justify-between">
           <h1 className="text-primary text-4xl tracking-widest text-left p-2 font-semibold ">
             Industries
           </h1>
@@ -167,8 +149,7 @@ const AboutPage = () => {
           </ul>
         </div>
 
-        {/* Why Us */}
-        <div className="w-[20%] flex flex-col items-center mt-28 justify-between">
+        <div className="lg:w-[20%] xs:w-full flex flex-col items-center mt-28 justify-between">
           <h1 className="text-primary text-4xl font-semibold tracking-widest text-left p-2">
             Why Us
           </h1>
@@ -184,7 +165,6 @@ const AboutPage = () => {
         </div>
       </div>
 
-      {/* Talks with us */}
       <div className="bg-quaternary w-full flex items-center justify-center min-h-[180px]">
         <Button
           variant="outlined"

@@ -5,9 +5,9 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <div className="w-full flex justify-center items-start gap-8 min-h-[395px]">
+    <div className="w-full flex xs:flex-col lg:flex-row px-3 justify-center items-start gap-8 min-h-[395px]">
       {/* About */}
-      <div className="flex flex-col max-w-[25%] gap-7 p-4 mt-20">
+      <div className="flex flex-col xs:w-full items-start lg:max-w-[25%] gap-7 lg:p-4 lg:mt-20 xs:mt-10">
         <div className="flex cursor-default">
           <img src={Logo} alt="Vastitude" className="h-[56px]" />
           <div className="flex flex-col justify-end items-end">
@@ -19,7 +19,7 @@ const Footer = () => {
             </p>
           </div>
         </div>
-        <p className="text-justify text-quinary text-xs tracking-wider leading-6">
+        <p className="text-justify text-quinary xs:w-full  lg:w-full text-xs tracking-wider leading-6">
           We are an architectural and interior design firm based in the India.
           We have delivered a number of creative interiors for hospitality,
           healthcare, office, Institutional, retail and residential spaces, from
@@ -28,11 +28,11 @@ const Footer = () => {
       </div>
 
       {/* Quicklinks */}
-      <div className="flex flex-col items-start justify-center mt-20">
+      <div className="flex flex-col items-start xs:w-full  lg:mt-20 xs:mt-5 lg:max-w-[25%]">
         <h1 className="uppercase text-primary font-bold tracking-widest ">
           Quicklinks
         </h1>
-        <div className="mt-5 flex flex-col items-start">
+        <div className="mt-5 flex flex-col items-start ">
           {quickLinks.map((item, index) => (
             <Link
               to={item.path}
@@ -48,7 +48,7 @@ const Footer = () => {
       </div>
 
       {/* Contact */}
-      <div className="flex flex-col items-start mt-20">
+      <div className="flex flex-col items-start lg:mt-20 xs:mt-5 xs:w-full lg:max-w-[25%]  mb-16  ">
         <h1 className="uppercase text-primary font-bold tracking-widest">
           Contact Us
         </h1>

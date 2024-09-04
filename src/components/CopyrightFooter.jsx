@@ -9,8 +9,8 @@ import { faCaretRight } from "@fortawesome/free-solid-svg-icons";
 
 const CopyrightFooter = () => {
   return (
-    <div className="bg-[#111111] w-full min-h-[79px] flex items-center justify-center">
-      <div className="w-[60%] flex items-center justify-start h-full">
+    <div className="bg-[#111111] w-full lg:min-h-[79px] xs:min-h-[172px] flex items-center justify-center lg:flex-row xs:gap-y-7 xs:flex-col">
+      <div className="w-[60%] flex items-center lg:justify-start xs:justify-center h-full">
         <p className="text-xs text-quinary">© Copyright 2024 - VASTITUDE</p>
       </div>
       {/* Pages */}
@@ -46,9 +46,9 @@ const CopyrightFooter = () => {
           href="https://wa.me/919467577839?text=Hello%20there!"
           target="_blank"
           rel="noopener noreferrer"
-          className="fixed bottom-7 flex items-center justify-between group gap-x-4 right-4"
+          className="fixed bottom-7 flex items-center justify-between group gap-x-4 right-4 z-[99]"
         >
-          <div className="p-1 rounded-xl bg-primary text-denary font-semibold px-2 hidden group-hover:block relative tracking-wide duration-200 ease-linear">
+          <div className="p-1 rounded-xl bg-primary text-denary font-semibold px-2 lg:hidden xs:block lg:group-hover:block relative tracking-wide duration-200 ease-linear">
             Contact Us
             <FontAwesomeIcon
               className="absolute -right-1 top-[30%] text-primary -translate-y-[0.5]"

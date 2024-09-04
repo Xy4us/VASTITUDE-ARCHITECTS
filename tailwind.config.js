@@ -6,6 +6,9 @@ module.exports = {
       fontFamily: {
         custom1: ["Merienda", "Sans"],
         custom2: ["Julius Sans One", "sans-serif"],
+        custom3: ["Alumni Sans Pinstripe", "sans-serif"],
+        custom4: ["Noto Serif Display", "sans-serif"],
+        custom5: ["Playfair Display SC", "sans-serif"],
       },
       colors: {
         primary: "var(--color-primary)",
@@ -19,6 +22,9 @@ module.exports = {
         nonary: "var(--color-nonary)",
         denary: "var(--color-denary)",
         tabs: "var(--color-tabs)",
+      },
+      screens: {
+        xs: "350px",
       },
     },
   },

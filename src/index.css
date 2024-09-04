@@ -1,5 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Merienda:wght@300..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe:ital@0;1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+Display:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -45,17 +48,20 @@ html {
 body {
   overflow-x: hidden;
   background-color: var(--color-denary);
+  color: white;
 }
 
 .parallax-container {
   position: relative;
-  height: 90vh;
+  height: 85vh;
   overflow: hidden;
+  z-index: 1;
 }
 
 .parallax {
-  background-image: url("./assets/About/Interior.jpg");
+  background-image: url("./assets/Our Approach/bg.jpg");
   height: 100%;
+  position: relative;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -79,3 +85,23 @@ body {
   pointer-events: none;
   transition: background 0.2s;
 }
+
+.slick-slide > div {
+  margin: 0 10px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.2s;
+  transform-style: preserve-3d;
+  min-height: 500px;
+  min-width: 500px;
+}
+
+/* #cccaca */
