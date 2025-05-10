@@ -33,7 +33,7 @@ const OurProjectsPage = () => {
 
       {/* Main Section */}
       <div className="w-full bg-denary mt-24 pt-4">
-        <HomeProjectsModified name="Talk with us" link="/contact" />
+        <HomeProjectsModified name="Talk with us" link="/contact-us" />
       </div>
     </div>
   );

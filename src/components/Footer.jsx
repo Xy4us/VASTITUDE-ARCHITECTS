@@ -58,13 +58,16 @@ const Footer = () => {
               {/* <span className="text-primary font-bold tracking-wider text-sm">
                 Office:
               </span>{" "} */}
-              H.no - D9A/1, 4<sup>th</sup> floor,
             </p>
-            <p> Ardee city, sector-52, Gurugram,</p>
-            <p>122003 - Haryana, India</p>
+            <p>
+              {" "}
+              D224<sup>th</sup> Sushant Shopping Arcade, Sector-43
+            </p>
+            <p>122009 - Gurugram, India</p>
           </div>
 
-          <div className="text-justify text-quinary text-xs flex flex-col items-start tracking-wider gap-1 border-b-[0.5px] border-[#111111] pb-2 min-w-[360px]">
+          {/* For branch in future */}
+          {/* <div className="text-justify text-quinary text-xs flex flex-col items-start tracking-wider gap-1 border-b-[0.5px] border-[#111111] pb-2 min-w-[360px]">
             <p className="text-justify text-quinary text-xs">
               <span className="text-primary font-bold tracking-wider text-sm">
                 Branch:
@@ -72,24 +75,33 @@ const Footer = () => {
               Block H, 502, supermax, sector-33, Sonipat, 133001 - Haryana,
               India
             </p>
-          </div>
+          </div> */}
           <p className="text-justify text-quinary text-xs min-w-[360px] border-b-[0.5px] border-[#111111] pb-2">
             <span className="text-primary font-bold tracking-wider text-sm">
               Mobile:
             </span>{" "}
-            +91 94675-77839
+            <a href="tel:+919467577839" className="hover:underline">
+              +91 94675-77839
+            </a>
           </p>
           <p className="text-justify text-quinary text-xs min-w-[360px] border-b-[0.5px] border-[#111111] pb-2">
             <span className="text-primary font-bold tracking-wider text-sm">
               Phone:
             </span>{" "}
-            +91 99962-63603
+            <a href="tel:+919996263603" className="hover:underline">
+              +91 99962-63603
+            </a>
           </p>
           <p className="text-justify text-quinary text-xs min-w-[360px] border-b-[0.5px] border-[#111111] pb-2">
             <span className="text-primary font-bold tracking-wider text-sm">
               Email:
             </span>{" "}
-            vastitudearchitects@gmail.com
+            <a
+              href="mailto:vastitudearchitects@gmail.com"
+              className="hover:underline"
+            >
+              vastitudearchitects@gmail.com
+            </a>
           </p>
         </div>
       </div>

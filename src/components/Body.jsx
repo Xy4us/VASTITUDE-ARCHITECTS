@@ -157,17 +157,6 @@ import Retail from "./Retail";
 import Housing from "./Housing";
 import LoadingComponent from "./LoadingComponent";
 
-// const AppWrapper = ({ children }) => {
-//   const location = useLocation();
-
-//   return (
-//     <>
-//       <LoadingComponent key={location.pathname} />
-//       {children}
-//     </>
-//   );
-// };
-
 const AppWrapper = ({ children }) => {
   const [isLoading, setIsLoading] = useState(true);
   const location = useLocation();

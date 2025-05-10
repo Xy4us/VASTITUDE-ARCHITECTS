@@ -178,13 +178,23 @@ const AboutPage = () => {
             },
           }}
         >
-          <div className="flex items-center justify-center w-[250px]">
+          {/* <div className="flex items-center justify-center w-[250px]">
             TALK WITH US{" "}
             <FontAwesomeIcon
               className="pl-2 p-1 font-extrabold"
               icon={faAngleRight}
             />
-          </div>
+          </div> */}
+          <Link
+            to="/contact-us"
+            className="flex items-center justify-center w-[250px]"
+          >
+            TALK WITH US{" "}
+            <FontAwesomeIcon
+              className="pl-2 p-1 font-extrabold"
+              icon={faAngleRight}
+            />
+          </Link>
         </Button>
       </div>
     </div>
