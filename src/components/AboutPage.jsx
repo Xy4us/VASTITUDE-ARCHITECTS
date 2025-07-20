@@ -156,8 +156,7 @@ const AboutPage = () => {
           <ul className="text-quaternary w-full tracking-wider flex flex-col items-center text-justify justify-between p-2 list-none mt-3 ">
             <li>Innovative Design Approach</li>
             <li>Case Studies</li>
-            <li> Sustainable Designs </li>
-            <li>Industr Connectivity </li>
+            <li>Sustainable Designs </li>
             <li>Industry Connectivity</li>
             <li>Collaborative Process</li>
             <li>Work On Reinvent</li>

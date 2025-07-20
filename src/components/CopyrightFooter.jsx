@@ -11,7 +11,9 @@ const CopyrightFooter = () => {
   return (
     <div className="bg-[#111111] w-full lg:min-h-[79px] xs:min-h-[172px] flex items-center justify-center lg:flex-row xs:gap-y-7 xs:flex-col">
       <div className="w-[60%] flex items-center lg:justify-start xs:justify-center h-full">
-        <p className="text-xs text-quinary">© Copyright 2024 - VASTITUDE</p>
+        <p className="text-xs text-quinary">
+          © Copyright {new Date().getFullYear()} - VASTITUDE
+        </p>
       </div>
       {/* Pages */}
       <div className="flex items-center justify-between gap-x-8">
